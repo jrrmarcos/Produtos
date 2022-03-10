@@ -1,0 +1,20 @@
+<h3>{{item.name | uppercase }}</h3>
+<div><span>Preço: </span>{{item.price * 2 | currency}}</div>
+<div><span>Quantidade: </span>{{item.qtde}}</div>
+
+<h2 *ngIf="item.qtde > 0">Disponível</h2>
+<h2 *ngIf="item.qtde == 0">Indisponível</h2> 
+
+<!--<ng-container *ngIf=""></ng-container>!-->
+
+
+
+<hr>
+<div>
+    <p>Nome:</p>
+    <input type="text" [(ngModel)]="item.name">
+    <p>Preço:</p>
+    <input type="number" [(ngModel)]="item.price">
+    <p>Quantidade:</p>
+    <input type="number" [(ngModel)]="item.qtde">
+</div> 

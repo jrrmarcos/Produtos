@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let produto of lista; let i = index" (click)="selecionar(produto)">
+        Item {{i}} : {{produto.name}} - 
+            <span *ngIf="produto.qtde > 0"><i>Disponível</i></span> 
+    </li>
+</ul>
