@@ -1,13 +1,9 @@
-<h3>{{item.name | uppercase }}</h3>
-<div><span>Preço: </span>{{item.price * 2 | currency}}</div>
+<h3>{{item.name | titlecase }}</h3>
+<div><span>Preço: </span>{{item.price | currency}}</div>
 <div><span>Quantidade: </span>{{item.qtde}}</div>
 
 <h2 *ngIf="item.qtde > 0">Disponível</h2>
 <h2 *ngIf="item.qtde == 0">Indisponível</h2> 
-
-<!--<ng-container *ngIf=""></ng-container>!-->
-
-
 
 <hr>
 <div>

@@ -8,6 +8,8 @@ import { Produto } from '../model/produto.model';
 })
 export class ListaProdutosComponent implements OnInit {
 
+  produtoSelecionado : Produto = {name: "", price: 0, qtde: 0}
+
   lista : Produto[] = [
     {name:"Toddynho", price:9.99, qtde:2000},
     {name:"Ovo", price:8.99, qtde:255},
@@ -23,7 +25,7 @@ export class ListaProdutosComponent implements OnInit {
   }
 
   selecionar(produto: Produto) : void { 
-    alert("Selecionei " + produto.name);
+    this.produtoSelecionado = produto; 
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Produto } from '../model/produto.model';
 
 @Component({
@@ -8,11 +8,7 @@ import { Produto } from '../model/produto.model';
 })
 export class DetalheProdutoComponent implements OnInit {
 
-  item : Produto = {
-    name: "Cerveja Tiger 473ml",
-    price: 3.25,
-    qtde: 1000
-  }
+  @Input() item: Produto = {name: "", price: 0, qtde: 0}; 
 
   constructor() { }
 
