@@ -2,8 +2,13 @@
   <h1>{{titulo}}</h1>
 </header>
 <main>
+
+  <nav> 
+    <button routerLink="produtos">Lista de produtos</button>
+  </nav>
   <p> {{mensagem}}</p> 
-  <app-lista-produtos></app-lista-produtos>
+  <router-outlet></router-outlet>
+  <!-- <app-lista-produtos></app-lista-produtos> --> 
 </main>
 <footer>
   <h2>Desenvolvido por {{desenvolvedor}}</h2>
